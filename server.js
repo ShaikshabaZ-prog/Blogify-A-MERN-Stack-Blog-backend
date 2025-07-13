@@ -8,7 +8,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: 'https://your-frontend.netlify.app',
+  origin: 'https://blogifyourblog.netlify.app/',
   credentials: true
 }));
 app.use(express.json());
