@@ -8,9 +8,10 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: 'https://blogifyourblog.netlify.app/',
+  origin: ['http://localhost:3000', 'https://blogifyourblog.netlify.app'],
   credentials: true
 }));
+
 app.use(express.json());
 
 
