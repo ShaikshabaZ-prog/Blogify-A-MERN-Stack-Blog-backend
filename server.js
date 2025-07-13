@@ -3,12 +3,14 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 
-
 dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://your-frontend.netlify.app',
+  credentials: true
+}));
 app.use(express.json());
 
 
